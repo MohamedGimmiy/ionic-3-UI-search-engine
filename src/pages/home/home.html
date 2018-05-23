@@ -1,0 +1,37 @@
+
+<ion-content padding >
+    <button [navPush]="log" style="font-size:25px; padding:15px; color:darkblue; background-color:white;" outline>login</button>
+    <button [navPush]="register" style="font-size:25px; padding:15px; color:red; background-color: white" outline>sign up</button>
+    <button [navPush]="pageHistoryUrls" style="font-size:25px; padding:15px; color:darkblue; background-color:white;" outline>PageHistory</button>
+    <button [navPush]="mostvisitedpages" style="font-size:25px; padding:15px; color:red; background-color:white;" outline>MostVisited</button>
+    
+
+
+  <div style="margin-top:10%;">
+      <!-- logo picture -->
+      <img src="/assets/imgs/Untitled-1.png" style="display: block; margin-left: auto;margin-right: auto;">
+
+      <!-- search bar -->
+      <ion-searchbar 	 (ionInput)="getItems($event)" style=" margin: auto;
+      width: 50%;"  id="ele">
+    </ion-searchbar>
+    <div  style="text-align:center; position:relative; z-index:1;">
+        <button  ion-button color="dark"  [navPush]="results">Search</button>
+      </div>
+      <ion-list style="position:relative;z-index:2; margin:auto; width:50%;" >
+        <ion-item *ngFor="let item of items">
+          {{ item }}
+        </ion-item>
+      </ion-list>
+      <!-- search button -[navPush]="YourFancyButton"-->
+
+
+
+    <p style="padding:30px 30px 0px 30px; text-align:center;position:relative; z-index:1;">&copy; 2018 Alpha Queue<p>
+
+
+  </div>
+   
+
+   
+</ion-content>
